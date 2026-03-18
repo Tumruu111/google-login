@@ -19,10 +19,10 @@ export default async function AdminPage() {
       <h1 className="text-3xl font-bold mb-4">Admin Panel</h1>
       <p className="text-gray-600">
         Logged in as <strong>{session.user?.email}</strong> with role{" "}
-        <span className="font-mono bg-gray-100 px-1 rounded">{session.user?.role}</span>
+        <span className="font-mono bg-gray-100 px-1 rounded">
+          {session.user?.role}
+        </span>
       </p>
     </div>
   );
 }
-
-

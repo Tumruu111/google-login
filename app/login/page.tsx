@@ -19,6 +19,26 @@ export default function LoginPage() {
             Sign in with Google
           </button>
         </form>
+        <form
+          action={async () => {
+            "use server";
+            await signIn("github", { redirectTo: "/dashboard" });
+          }}
+        >
+          <button
+            type="submit"
+            className="w-full rounded bg-white border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-50"
+          >
+            Sign in with Github
+          </button>
+        </form>
+        <p className="text-center text-sm text-gray-500">
+          No account? {""}
+          <a href="/register" className="text-blue-200 hover:underline">
+            {" "}
+            Register{" "}
+          </a>
+        </p>
       </div>
     </div>
   );
